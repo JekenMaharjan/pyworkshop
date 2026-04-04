@@ -1,5 +1,5 @@
 # ===============================================================
-# Control Statements (if-else, loops)
+# CONTROL STATEMENTS (if-else, loops) PRACTICE
 # ===============================================================
 
 # 1. Print numbers from 1 to 100
