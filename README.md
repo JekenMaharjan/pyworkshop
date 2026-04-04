@@ -1,3 +1,3 @@
-# Python Workshop
+# Python Workshop from Frontend Masters
 
-Learning python step by step
+This repository contains my step-by-step learning journey for Python from the Frontend Masters workshop.
