@@ -12,7 +12,6 @@ for num in list:
 
 print(f"Largest element in list is {largest}")
 
-# ---------------------------------------------------------------
 
 # 2. Find smallest element in list
 list = [2, 4, 1, 5, 22, 33, 12, 41, 32, 40]
@@ -24,7 +23,6 @@ for num in list:
 
 print(f"Smallest element in list is {smallest}")
 
-# ---------------------------------------------------------------
 
 # 3. Remove duplicates from list
 list = [2, 1, 4, 5, 2, 3, 6, 2, 23, 4]
@@ -40,7 +38,6 @@ print(f"List after removing duplicates is '{unique_list}'")
 # remove_duplicates = set(list)
 # print(f"List after removing duplicates is '{remove_duplicates}'")
 
-# ---------------------------------------------------------------
 
 # 4. Sort list without using sort()
 numbers = [5, 2, 9, 1, 7, 3]
@@ -60,7 +57,6 @@ for i in range(n):
 
 print(numbers)
 
-# ---------------------------------------------------------------
 
 # 5. Find second largest element
 numbers = [2, 55, 1, 21, 14, 5]
@@ -81,7 +77,6 @@ print(f"Second largest number is {sorted_number[-2]}")
 
 # print(f"Second largest number is {second_largest}")
 
-# ---------------------------------------------------------------
 
 # 6. Merge two lists
 list1 = [1, 2, 3, 4, 5]
@@ -91,7 +86,6 @@ merge_list = list1 + list2
 
 print(f"Merged two lists : {merge_list}")
 
-# ---------------------------------------------------------------
 
 # 7. Count occurrences of element
 numbers = [2, 3, 5, 2, 5, 3, 6, 2, 4, 2, 5]
@@ -108,7 +102,6 @@ for num in numbers:
 
 print(count)
 
-# ---------------------------------------------------------------
 
 # 8. Reverse list
 list = [2, 5, 22, 1, 7]
@@ -242,6 +235,65 @@ multiplication_table = [[i * j for j in range(1, 4)] for i in range(1, 4)]
 
 print(multiplication_table)
 
+# ===============================================================
+# GENERATOR COMPREHENSION
+# ===============================================================
 
+# A Generator Comprehension is like List Comprehension, but it does not store all values in memory.
+# Instead, it generates values one by one when needed.
+# It uses '()'. This does NOT store values, it generates them when needed.
+# Example:
+squares = (x**2 for x in range(5))
 
+print(squares)
 
+# To Get Values from Generator use loop,
+squares = (x**2 for x in range(5))
+
+for num in squares:
+    print(num)
+
+# Only difference:
+# [] → List
+# () → Generator
+
+# Use generator when:
+# 1. Large data
+# 2. Memory saving
+# 3. Performance improvement
+
+# Example:
+numbers = (i for i in range(1000000))
+# This does not store 1 million numbers in memory. It generates one by one.
+
+# ---------------------------------------------------------------
+
+# Q1. Create a generator that generates even numbers from 1 to 10.
+gen_numbers = (num for num in range(1, 11) if num % 2 == 0)
+
+for i in gen_numbers:
+    print(i)
+
+# Generators run only once.
+gen_numbers = (num for num in range(1, 11) if num % 2 == 0)
+
+for i in gen_numbers:
+    print(i)
+
+print("Second time:")
+
+for i in gen_numbers:
+    print(i)
+
+# Second loop prints nothing, Because generator is already exhausted.
+# This is a very important concept.
+
+# When to Use Generator vs List?
+# Use List when:
+# 1. You need values multiple times
+# 2. Small data
+
+# Use Generator when:
+# 1. Large data
+# 2. Memory efficiency
+# 3. One-time iteration
