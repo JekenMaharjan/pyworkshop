@@ -109,6 +109,124 @@ list = [2, 5, 22, 1, 7]
 reversed_list = list[::-1]
 print(f"Reversed list : {reversed_list}")
 
+# ===============================================================
+# LIST SLICING
+# ===============================================================
+
+# List slicing is used to extract part of a list.
+
+# Syntax:
+# list[start:end]
+# Example:
+numbers = [1, 2, 3, 4, 5]
+
+print(numbers[1:4])
+# start = 1 → include
+# end = 4 → exclude
+
+
+# Slicing Without Start:
+# You can also omit the start index.
+# Example:
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[:3])
+# Meaning:
+# 1. Start from beginning
+# 2. Stop before index 3
+
+
+# Slicing Without End:
+# You can also omit the end index.
+# Example:
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[2:])
+# Meaning:
+# 1. Start from index 2
+# 2. Go till the end
+
+
+# Full List Slicing:
+# You can also copy a list using slicing:
+# Example:
+numbers = [1, 2, 3, 4, 5]
+
+copy_list = numbers[:]
+
+print(copy_list)
+# This is called shallow copy.
+
+
+# Slicing with Step:
+# Syntax:
+# list[start:end:step]
+# Example:
+numbers = [1, 2, 3, 4, 5, 6]
+
+print(numbers[::2])
+# Meaning:
+# 1. Start from beginning
+# 2. Take every 2nd element
+
+# ---------------------------------------------------------------
+
+# Q1. Given:
+#     numbers = [10, 20, 30, 40, 50, 60]
+#     Get:
+#     [20, 30, 40]
+numbers = [10, 20, 30, 40, 50, 60]
+
+print(numbers[1:4])
+
+
+# Q2. Given:
+#     numbers = [5, 10, 15, 20, 25, 30]
+#     Get:
+#     [5, 10, 15]
+numbers = [5, 10, 15, 20, 25, 30]
+
+print(numbers[:3])
+
+
+# Q3. Given:
+#     numbers = [1, 2, 3, 4, 5, 6]
+#     Get:
+#     [4, 5, 6]
+numbers = [1, 2, 3, 4, 5, 6]
+
+print(numbers[3:])
+
+
+# Q4. Create a copy of this list using slicing:
+#     numbers = [10, 20, 30, 40]
+#     Expected Output:
+#     [10, 20, 30, 40]
+numbers = [10, 20, 30, 40]
+
+copy_list = numbers[:]
+
+print(copy_list)
+
+
+# Q5. Given:
+#     numbers = [10, 20, 30, 40, 50, 60]
+#     Get:
+#     [10, 30, 50]
+numbers = [10, 20, 30, 40, 50, 60]
+
+print(numbers[::2])
+
+
+# Q6. Reverse List Using Slicing
+numbers = [1, 2, 3, 4, 5]
+
+print(numbers[::-1])
+# Here, Step = -1 → reverse direction
+
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[::-1])
 
 # ===============================================================
 # LIST COMPREHENSIONS
