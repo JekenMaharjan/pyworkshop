@@ -4,6 +4,14 @@ This repository contains my step-by-step learning journey for Python from the Fr
 
 ---
 
+## Learning Resources
+
+I'm learning Python step-by-step using:
+
+- [Practical Python](https://practical.learnpython.dev/)
+
+---
+
 ## Setup Instructions
 
 Follow these steps to set up the project environment and install dependencies:
@@ -36,6 +44,13 @@ If you add new packages and want to save them for others, run:
 ```bash
 pip freeze > requirements.txt
 ```
+
+> Best Practice to install any libraries:
+
+```bash
+python -m pip install _______ (library_name)
+```
+
 ---
 
 ## Connect with Me
